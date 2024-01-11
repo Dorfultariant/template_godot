@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b38mpvjbbumjd"]
+
+[ext_resource type="PackedScene" uid="uid://olfwi1kjxcox" path="res://scenes/projectiles/projectile.tscn" id="1_3h3vy"]
+[ext_resource type="Texture2D" uid="uid://bq6dio54vlswq" path="res://resources/graphics/projectiles/he_round.png" id="2_7o1v8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ltybk"]
+
+[node name="HeavyExplosive" instance=ExtResource("1_3h3vy")]
+scale = Vector2(0.997947, 1)
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_7o1v8")
+
+[node name="CollisionShape2D" parent="." index="1"]
+rotation = 1.5708
+scale = Vector2(6.12, 21.8)
+shape = SubResource("CapsuleShape2D_ltybk")

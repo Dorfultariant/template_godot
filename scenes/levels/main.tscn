@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtvdoxeel27yk"]
+
+[ext_resource type="Script" path="res://scenes/levels/main.gd" id="1_ecee3"]
+[ext_resource type="Texture2D" uid="uid://bajoukr8x01hg" path="res://resources/graphics/background/viking_horn_pint.jpg" id="1_s1v8y"]
+[ext_resource type="PackedScene" uid="uid://b14wrf4f63rga" path="res://scenes/characters/tank.tscn" id="2_pe2yo"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ecee3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(575, 491)
+texture = ExtResource("1_s1v8y")
+
+[node name="Tank" parent="." instance=ExtResource("2_pe2yo")]
+position = Vector2(555, 327)
+
+[node name="Projectiles" type="Node2D" parent="."]
+
+[connection signal="ap" from="Tank" to="." method="_on_tank_ap"]
+[connection signal="he" from="Tank" to="." method="_on_tank_he"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpwio7kkgdgjs"]
+
+[ext_resource type="PackedScene" uid="uid://olfwi1kjxcox" path="res://scenes/projectiles/projectile.tscn" id="1_5lrry"]
+[ext_resource type="Texture2D" uid="uid://gplh0caxk0p6" path="res://resources/graphics/projectiles/ap_round.png" id="2_lvrso"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cljh0"]
+
+[node name="ArmorPiercing" instance=ExtResource("1_5lrry")]
+scale = Vector2(0.08, 0.08)
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_lvrso")
+
+[node name="CollisionShape2D" parent="." index="1"]
+rotation = 1.5708
+scale = Vector2(4.92, 22.4)
+shape = SubResource("CapsuleShape2D_cljh0")
