@@ -6,7 +6,7 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l3f0q"]
 
 [node name="HMG" type="Area2D"]
-scale = Vector2(0.03, 0.030261)
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_kg7f3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

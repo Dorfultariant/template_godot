@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://jw2ytwab6t3x"]
 
-[ext_resource type="Texture2D" uid="uid://nren2lamy0x1" path="res://resources/graphics/tank/turret.png" id="1_jvpd0"]
 [ext_resource type="Script" path="res://scenes/characters/turret.gd" id="1_wtfy4"]
+[ext_resource type="Texture2D" uid="uid://doqg4gvwud2iv" path="res://resources/graphics/tank/tank_turret_1.png" id="2_60uq8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3m13e"]
 
@@ -12,19 +12,18 @@ script = ExtResource("1_wtfy4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
-scale = Vector2(4.4, 4)
+scale = Vector2(5.92, 6.32)
 shape = SubResource("CapsuleShape2D_3m13e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(45, 0)
-rotation = 1.5708
-texture = ExtResource("1_jvpd0")
+position = Vector2(138, 1)
+texture = ExtResource("2_60uq8")
 
 [node name="MainAmmoPoint" type="Marker2D" parent="."]
-position = Vector2(135, 0)
+position = Vector2(303, -1)
 
 [node name="SecondaryAmmoPoint" type="Marker2D" parent="."]
-position = Vector2(34, -13)
+position = Vector2(102, -25)
 
 [node name="MainGunReloadTimer" type="Timer" parent="."]
 wait_time = 0.2

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bokpl072i6eda"]
+
+[ext_resource type="Texture2D" uid="uid://doqg4gvwud2iv" path="res://resources/graphics/tank/tank_turret_1.png" id="1_peafm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r1qwh"]
+
+[node name="EnemyTurret" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(137, 0)
+texture = ExtResource("1_peafm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+scale = Vector2(5.8, 6.50542)
+shape = SubResource("CapsuleShape2D_r1qwh")
+
+[node name="MainGunPoint" type="Marker2D" parent="."]
+position = Vector2(292, -1)
+
+[node name="SecondaryGunPoint" type="Marker2D" parent="."]
+position = Vector2(95, -27)

@@ -1,23 +1,24 @@
 [gd_scene load_steps=5 format=3 uid="uid://b14wrf4f63rga"]
 
 [ext_resource type="Script" path="res://scenes/characters/tank.gd" id="1_0aut4"]
-[ext_resource type="Texture2D" uid="uid://462vx4bqi7x8" path="res://resources/graphics/tank/tank_hull.png" id="1_tv1di"]
+[ext_resource type="Texture2D" uid="uid://b382irog2pufb" path="res://resources/graphics/tank/tank_hull_1.png" id="2_vrqgv"]
 [ext_resource type="PackedScene" uid="uid://jw2ytwab6t3x" path="res://scenes/characters/turret.tscn" id="4_5yvhr"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1h0xl"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ymt7s"]
 
 [node name="Tank" type="CharacterBody2D"]
 collision_mask = 61
 script = ExtResource("1_0aut4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(9.86175, 6.36)
-shape = SubResource("RectangleShape2D_1h0xl")
+scale = Vector2(26.0218, 11.92)
+shape = SubResource("CapsuleShape2D_ymt7s")
 
 [node name="Hull" type="Sprite2D" parent="."]
-texture = ExtResource("1_tv1di")
+texture = ExtResource("2_vrqgv")
 
 [node name="Turret" parent="." instance=ExtResource("4_5yvhr")]
+position = Vector2(-112, 0)
 
 [node name="SelfDestructTimer" type="Timer" parent="."]
 wait_time = 4.0
@@ -28,11 +29,14 @@ wait_time = 0.2
 one_shot = true
 
 [node name="SecondaryGunReloadTimer" type="Timer" parent="."]
-wait_time = 0.01
+wait_time = 0.1
 one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.6, 0.6)
 
 [connection signal="ap" from="Turret" to="." method="_on_turret_ap"]
 [connection signal="he" from="Turret" to="." method="_on_turret_he"]
 [connection signal="timeout" from="MainGunReloadTimer" to="." method="_on_main_gun_reload_timer_timeout"]
-[connection signal="timeout" from="SecondaryGunReloadTimer" to="." method="_on_main_gun_reload_timer_timeout"]
 [connection signal="timeout" from="SecondaryGunReloadTimer" to="." method="_on_secondary_gun_reload_timer_timeout"]
+[connection signal="timeout" from="SecondaryGunReloadTimer" to="." method="_on_main_gun_reload_timer_timeout"]

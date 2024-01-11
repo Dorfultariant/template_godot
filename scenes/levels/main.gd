@@ -26,7 +26,7 @@ func _on_tank_ap_shot(pos, direction):
 
 
 func _on_tank_he_shot(pos, direction):
-	var he = armor_piercing_scene.instantiate()
+	var he = heavy_explosive_scene.instantiate()
 	
 	he.position = pos
 	he.rotation = $Tank/Turret.global_rotation

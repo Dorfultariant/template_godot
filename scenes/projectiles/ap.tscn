@@ -6,10 +6,10 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nkbxw"]
 
 [node name="AP" type="Area2D"]
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_0q1hs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.08, 0.08)
 texture = ExtResource("1_jtigh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
