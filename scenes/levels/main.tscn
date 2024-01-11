@@ -17,5 +17,5 @@ position = Vector2(555, 327)
 
 [node name="Projectiles" type="Node2D" parent="."]
 
-[connection signal="ap" from="Tank" to="." method="_on_tank_ap"]
-[connection signal="he" from="Tank" to="." method="_on_tank_he"]
+[connection signal="ap_shot" from="Tank" to="." method="_on_tank_ap_shot"]
+[connection signal="he_shot" from="Tank" to="." method="_on_tank_he_shot"]

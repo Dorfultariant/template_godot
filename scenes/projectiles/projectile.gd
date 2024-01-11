@@ -1,9 +1,8 @@
+extends Area2D
 class_name Projectile
 
-extends Area2D
-
 @export var speed: int = 2500
-var direction: Vector2 = Vector2.UP
+var direction: Vector2 = Vector2()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$SelfDestructTimer.start()

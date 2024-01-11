@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b14wrf4f63rga"]
+[gd_scene load_steps=6 format=3 uid="uid://b14wrf4f63rga"]
 
 [ext_resource type="Script" path="res://scenes/characters/tank.gd" id="1_0aut4"]
 [ext_resource type="Texture2D" uid="uid://462vx4bqi7x8" path="res://resources/graphics/tank/tank_hull.png" id="1_tv1di"]
 [ext_resource type="Texture2D" uid="uid://cm8jkglmahy3s" path="res://resources/graphics/tank/turret_1_piper_horizontal_2.png" id="3_lsf53"]
+[ext_resource type="PackedScene" uid="uid://jw2ytwab6t3x" path="res://scenes/characters/turret.tscn" id="4_5yvhr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1h0xl"]
 
 [node name="Tank" type="CharacterBody2D"]
+collision_mask = 61
 script = ExtResource("1_0aut4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -17,14 +19,15 @@ shape = SubResource("RectangleShape2D_1h0xl")
 texture = ExtResource("1_tv1di")
 
 [node name="Turret" type="Sprite2D" parent="Hull"]
+visible = false
 texture = ExtResource("3_lsf53")
 region_rect = Rect2(0, 0, 89, 283.692)
 
 [node name="ProjectilePoint" type="Marker2D" parent="Hull/Turret"]
+visible = false
 position = Vector2(147, 0)
 
-[node name="MainReloadTimer" type="Timer" parent="."]
-wait_time = 0.5
-one_shot = true
+[node name="Turret" parent="." instance=ExtResource("4_5yvhr")]
 
-[connection signal="timeout" from="MainReloadTimer" to="." method="_on_main_reload_timer_timeout"]
+[connection signal="ap" from="Turret" to="." method="_on_turret_ap"]
+[connection signal="he" from="Turret" to="." method="_on_turret_he"]

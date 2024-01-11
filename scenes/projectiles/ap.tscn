@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctbmk6tjksbxj"]
+
+[ext_resource type="PackedScene" uid="uid://olfwi1kjxcox" path="res://scenes/projectiles/projectile.tscn" id="1_47naa"]
+
+[node name="Projectile" instance=ExtResource("1_47naa")]
+speed = null
