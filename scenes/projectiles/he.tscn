@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6638c46amutn"]
+
+[ext_resource type="Texture2D" uid="uid://bq6dio54vlswq" path="res://resources/graphics/projectiles/he_round.png" id="1_8ohsa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rorsj"]
+
+[node name="HE" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8ohsa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+scale = Vector2(6.23753, 21.52)
+shape = SubResource("CapsuleShape2D_rorsj")
+
+[node name="SelfDestructTimer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true

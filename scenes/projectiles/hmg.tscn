@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3yyhvx6mpcl1"]
+
+[ext_resource type="Script" path="res://scenes/projectiles/hmg.gd" id="1_kg7f3"]
+[ext_resource type="Texture2D" uid="uid://bok0es6532etj" path="res://resources/graphics/projectiles/hmg_round.png" id="1_sf1nc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l3f0q"]
+
+[node name="HMG" type="Area2D"]
+scale = Vector2(0.03, 0.030261)
+script = ExtResource("1_kg7f3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sf1nc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+scale = Vector2(2.36, 13.04)
+shape = SubResource("CapsuleShape2D_l3f0q")
+
+[node name="SelfDestructTimer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true

@@ -27,7 +27,7 @@ position = Vector2(135, 0)
 position = Vector2(34, -13)
 
 [node name="MainGunReloadTimer" type="Timer" parent="."]
-wait_time = 0.8
+wait_time = 0.2
 one_shot = true
 
 [connection signal="timeout" from="MainGunReloadTimer" to="." method="_on_main_gun_reload_timer_timeout"]

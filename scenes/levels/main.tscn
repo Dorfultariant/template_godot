@@ -19,3 +19,4 @@ position = Vector2(555, 327)
 
 [connection signal="ap_shot" from="Tank" to="." method="_on_tank_ap_shot"]
 [connection signal="he_shot" from="Tank" to="." method="_on_tank_he_shot"]
+[connection signal="hmg_shot" from="Tank" to="." method="_on_tank_hmg_shot"]
