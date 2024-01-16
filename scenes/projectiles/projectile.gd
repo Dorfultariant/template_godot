@@ -15,3 +15,9 @@ func _process(delta):
 # Handles the destruction of projectile after certain time
 func _on_self_destruct_timer_timeout():
 	queue_free()
+
+
+func _on_body_entered(body):
+	if "hit" in body:
+		body.hit()
+	queue_free() # Replace with function body.

@@ -38,5 +38,5 @@ zoom = Vector2(0.6, 0.6)
 [connection signal="ap" from="Turret" to="." method="_on_turret_ap"]
 [connection signal="he" from="Turret" to="." method="_on_turret_he"]
 [connection signal="timeout" from="MainGunReloadTimer" to="." method="_on_main_gun_reload_timer_timeout"]
-[connection signal="timeout" from="SecondaryGunReloadTimer" to="." method="_on_secondary_gun_reload_timer_timeout"]
 [connection signal="timeout" from="SecondaryGunReloadTimer" to="." method="_on_main_gun_reload_timer_timeout"]
+[connection signal="timeout" from="SecondaryGunReloadTimer" to="." method="_on_secondary_gun_reload_timer_timeout"]
