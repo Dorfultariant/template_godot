@@ -5,17 +5,6 @@ var heavy_explosive_scene: PackedScene = preload("res://scenes/projectiles/he.ts
 var hmg_scene: PackedScene = preload("res://scenes/projectiles/hmg.tscn")
 
 
-# Called when the node enters the scene
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-
 func _on_tank_ap_shot(pos, direction):
 	var ap = armor_piercing_scene.instantiate()
 	
