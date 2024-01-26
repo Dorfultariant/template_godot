@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bajoukr8x01hg"
-path="res://.godot/imported/viking_horn_pint.jpg-f0e4c0df23966d5160930f6e55f87fdc.ctex"
+uid="uid://dnjdd1g3x284h"
+path="res://.godot/imported/dirt_tileset_256.png-b8d0bc0f4202578de2803266d6d011b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/graphics/background/viking_horn_pint.jpg"
-dest_files=["res://.godot/imported/viking_horn_pint.jpg-f0e4c0df23966d5160930f6e55f87fdc.ctex"]
+source_file="res://resources/graphics/background/dirt_tileset_256.png"
+dest_files=["res://.godot/imported/dirt_tileset_256.png-b8d0bc0f4202578de2803266d6d011b7.ctex"]
 
 [params]
 

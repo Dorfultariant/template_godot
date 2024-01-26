@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tc323pce8mjd"
-path="res://.godot/imported/viking.jpg-b87524da6eb1447483f20ae00d8ac932.ctex"
+uid="uid://bi5gxaadvmjae"
+path="res://.godot/imported/road_tileset_256.png-824d670e1d79a9212f61210612f9a14b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/graphics/background/viking.jpg"
-dest_files=["res://.godot/imported/viking.jpg-b87524da6eb1447483f20ae00d8ac932.ctex"]
+source_file="res://resources/graphics/background/road_tileset_256.png"
+dest_files=["res://.godot/imported/road_tileset_256.png-824d670e1d79a9212f61210612f9a14b.ctex"]
 
 [params]
 
